@@ -1,174 +1,147 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LydiaCHY</title>
-  <meta name="description" content="LydiaCHY 的个人主页" />
-  <style>
-    :root{
-      --bg:#0b1220;/* 背景 */
-      --card:#0f1628;/* 卡片 */
-      --text:#e6edf7;/* 文字 */
-      --muted:#9fb3c8;/* 次要文字 */
-      --brand:#4da3ff;/* 主题色：冰蓝 */
-      --accent:#a6f6ff;/* 点缀色：冰晶青蓝 */
-      --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.25);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
-      color:var(--text);
-      background:radial-gradient(1200px 800px at 10% 10%, #0d1a33, transparent),
-                 radial-gradient(1000px 700px at 90% 20%, #0a1a2b, transparent),
-                 linear-gradient(180deg, #0b1220, #0e1628);
-    }
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:24px}
-    header{
-      position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);
-      background:linear-gradient( to bottom, rgba(11,18,32,.85), rgba(11,18,32,.35));
-      border-bottom:1px solid rgba(255,255,255,.06);
-      z-index:10;
-    }
-    nav{display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
-    .menu{display:flex;gap:16px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:999px;background:var(--brand);color:white;font-weight:600;box-shadow:var(--shadow)}
-
-    .hero{padding:80px 0 40px}
-    .hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-          border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero h1{font-size:42px;line-height:1.2;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0 0 18px}
-    .badges{display:flex;gap:10px;flex-wrap:wrap}
-    .badge{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:#d0d8e6}
-    .illus{aspect-ratio:4/3;border-radius:var(--radius);background:radial-gradient(240px 200px at 30% 30%, rgba(77,163,255,.30), transparent),radial-gradient(240px 200px at 70% 60%, rgba(166,246,255,.25), transparent), #0f1626;display:grid;place-items:center}
-    .illus span{opacity:.8;text-align:center;padding:12px}
-
-    section{padding:40px 0}
-    .section-title{font-size:24px;margin:0 0 16px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .tile{padding:18px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01))}
-    .tile h3{margin:6px 0 8px;font-size:18px}
-    .tile p{margin:0;color:var(--muted)}
-
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-
-    .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
-    form{display:grid;gap:10px}
-    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:#0f1626;color:var(--text)}
-    textarea{min-height:120px;resize:vertical}
-    .small{font-size:12px;color:var(--muted)}
-
-    footer{padding:24px 0;color:#9aa4b2;border-top:1px solid rgba(255,255,255,.08)}
-
-    @media (max-width:960px){
-      .hero .wrap, .about, .contact{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LydiaCHY · 个人网站</title>
+<meta name="description" content="LydiaCHY｜西工大附中 → 北京大学医学部（临床医学在读）">
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Snow_flake_icon.svg/1024px-Snow_flake_icon.svg.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#0f1f3a;           /* 深海蓝 */
+    --bg2:#0a5ea5;           /* 科技蓝 */
+    --bg3:#7cd5ff;           /* 冰晶蓝 */
+    --glass:rgba(255,255,255,.12);
+    --stroke:rgba(255,255,255,.22);
+    --text:#eaf7ff;
+    --muted:#cfe9ff;
+    --link:#a8ecff;
+    --accent:#b6f0ff;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; color:var(--text); font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto;
+    background:
+      radial-gradient(1200px 800px at 80% -10%, rgba(124,213,255,.35), transparent 60%),
+      radial-gradient(900px 600px at -10% 20%, rgba(10,94,165,.45), transparent 60%),
+      linear-gradient(160deg, var(--bg1), #0b2c58 40%, #073a68 70%, #062a46 100%);
+  }
+  .shell{max-width:980px; margin:0 auto; padding:48px 20px 80px}
+  header{
+    display:flex; align-items:center; gap:28px; flex-wrap:wrap; justify-content:center;
+    padding:28px; border:1px solid var(--stroke); border-radius:20px; background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(2,26,56,.35), inset 0 0 0 1px rgba(255,255,255,.08);
+  }
+  .avatar{
+    width:108px; height:108px; border-radius:50%;
+    background:linear-gradient(145deg, var(--bg3), #e8fbff);
+    padding:3px;
+    box-shadow:0 8px 30px rgba(124,213,255,.35);
+  }
+  .avatar img{width:100%; height:100%; display:block; border-radius:50%}
+  h1{margin:0; font-size:32px; letter-spacing:.5px}
+  .tagline{margin:6px 0 0; color:var(--muted); font-weight:400}
+  .badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+  .badge{
+    padding:6px 10px; border-radius:999px; border:1px solid var(--stroke);
+    background:rgba(255,255,255,.06); color:var(--link); font-size:12px; letter-spacing:.3px
+  }
+  .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+  .btn{
+    padding:10px 14px; border-radius:12px; border:1px solid var(--stroke);
+    color:var(--text); text-decoration:none; font-weight:600;
+    background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+    transition:.2s transform ease, .2s box-shadow ease, .2s background ease;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 8px 18px rgba(9,125,194,.45)}
+  .btn.primary{background:linear-gradient(180deg, #6ad1ff, #4fb3ea); color:#04263e; border-color:rgba(255,255,255,.35)}
+  main{margin-top:32px; display:grid; gap:20px}
+  .card{
+    padding:22px; border:1px solid var(--stroke); border-radius:18px;
+    background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+    backdrop-filter: blur(10px);
+  }
+  .sec-title{margin:0 0 10px; font-size:18px; letter-spacing:.4px; color:var(--accent)}
+  .timeline{display:grid; gap:12px}
+  .item{
+    padding:14px 16px; border-radius:14px; border:1px dashed rgba(255,255,255,.25);
+    background:rgba(255,255,255,.04)
+  }
+  .item b{display:block; font-size:15px}
+  .muted{color:var(--muted)}
+  footer{margin-top:26px; text-align:center; color:#b7ddff75; font-size:12px}
+  a.inline{color:var(--link)}
+  @media (max-width:520px){h1{font-size:26px}.avatar{width:92px;height:92px}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand"><span class="dot"></span><span>LydiaCHY</span></div>
-        <div class="menu">
-          <a href="#about">关于我</a>
-          <a href="#experience">经历</a>
-          <a href="#contact" class="btn">联系我</a>
+  <div class="shell">
+    <header>
+      <div class="avatar">
+        <img src="https://pica.zhimg.com/v2-177c5f79e066db09e22a273097569e6e_1440w.jpg" alt="LydiaCHY Avatar">
+      </div>
+      <div>
+        <h1>Hi, I’m LydiaCHY ❄️</h1>
+        <p class="tagline">西工大附中 → 北京大学医学部｜临床医学在读</p>
+        <div class="badges">
+          <span class="badge">临床医学</span>
+          <span class="badge">学生</span>
+          <span class="badge">冰雪科技蓝爱好者</span>
         </div>
-      </nav>
-    </div>
-  </header>
+        <div class="actions">
+          <a class="btn primary" href="mailto:lydia@example.com">📮 写信给我</a>
+          <a class="btn" href="#notes">📘 学习札记</a>
+          <a class="btn" href="#links">🔗 常用链接</a>
+        </div>
+      </div>
+    </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="wrap">
-        <div class="card" style="padding:22px">
-          <h1>你好，我是<span style="color:var(--brand)">LydiaCHY</span> 👋</h1>
-          <p>我是一名在读临床医学生，经历是「西工大附中 → 北京大学医学部」。喜欢把医学和科技的知识讲得清清楚楚、软软糯糯。</p>
-          <div class="badges">
-            <span class="badge">学生</span>
-            <span class="badge">临床医学</span>
-            <span class="badge">北京大学医学部</span>
+    <main>
+      <section class="card">
+        <h2 class="sec-title">我的经历</h2>
+        <div class="timeline">
+          <div class="item">
+            <b>西工大附中</b>
+            <span class="muted">打好数理基础，也爱上了生物与医学。</span>
+          </div>
+          <div class="item">
+            <b>北京大学医学部（临床医学在读）</b>
+            <span class="muted">专业学习ing，未来想把医学与科普结合。</span>
+          </div>
+          <div class="item">
+            <b>未来作品 · 敬请期待</b>
+            <span class="muted">先种下主页，等作品长出来我们再一起上墙～</span>
           </div>
         </div>
-        <div class="illus card">
-          <span>这里可以放你的照片或插画（把下方 img 的 src 换成你的链接）<br><img src="你的图片地址" alt="LydiaCHY" style="max-width:80%;border-radius:12px"></span>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="experience">
-      <h2 class="section-title">📚 我的经历</h2>
-      <div class="grid">
-        <article class="tile">
-          <h3>西工大附中</h3>
-          <p>高中阶段打下扎实的理科与人文基础。</p>
-        </article>
-        <article class="tile">
-          <h3>北京大学医学部</h3>
-          <p>临床医学在读：拥抱科学与人文，修炼医者基本功。</p>
-        </article>
-        <article class="tile">
-          <h3>未来作品</h3>
-          <p>正在积蓄力量，敬请期待～</p>
-        </article>
-      </div>
-    </section>
+      <section id="notes" class="card">
+        <h2 class="sec-title">学习札记（可以当小博客）</h2>
+        <p class="muted">现在还空白。你可以把课堂小结、读书笔记、科普随笔写在这里。</p>
+        <ul>
+          <li><span class="muted">（示例）</span> <a class="inline" href="#">术语速记：血常规的那些缩写</a></li>
+          <li><span class="muted">（示例）</span> <a class="inline" href="#">如何用 3 步讲清一个病理机制</a></li>
+        </ul>
+      </section>
 
-    <section id="about">
-      <h2 class="section-title">🙋 关于我</h2>
-      <div class="about">
-        <div class="tile">
-          <p>你好，我是 LydiaCHY。正在北京大学医学部学习临床医学，对医学知识的清晰表达、科普写作和新技术在医疗中的应用很感兴趣。这个小站会记录我的学习、思考与成长。</p>
-        </div>
-        <div class="tile">
-          <ul>
-            <li>📍 城市：北京（可变）</li>
-            <li>🎓 学校/专业：北京大学医学部｜临床医学（在读）</li>
-            <li>🧰 正在修炼：临床基础、科研入门、信息整理</li>
-            <li>🧩 计划：写几篇学习札记，做一个小小的医学科普专栏</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      <section id="links" class="card">
+        <h2 class="sec-title">常用链接</h2>
+        <ul>
+          <li><a class="inline" href="https://pkusm.pku.edu.cn/" target="_blank" rel="noreferrer">北京大学医学部</a></li>
+          <li><a class="inline" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a></li>
+          <li><a class="inline" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noreferrer">PubMed</a></li>
+        </ul>
+      </section>
+    </main>
 
-    <section id="contact">
-      <h2 class="section-title">📬 联系我</h2>
-      <div class="contact">
-        <form action="mailto:your@email.com" method="post" enctype="text/plain" class="card" style="padding:18px">
-          <input name="name" placeholder="你的名字" required />
-          <input name="email" type="email" placeholder="你的邮箱" required />
-          <textarea name="message" placeholder="想对我说什么…" required></textarea>
-          <button class="btn" type="submit">发送</button>
-          <div class="small">* 暂未设置专用邮箱，如需，我可以帮你接入表单服务。</div>
-        </form>
-        <div class="tile">
-          <p>也可以在这些地方找到我（稍后可替换真实链接）：</p>
-          <p>🐙 GitHub：<a href="#">@yourname</a><br>
-             💼 LinkedIn：<a href="#">your-link</a><br>
-             ✉️ 邮箱：<a href="mailto:your@email.com">your@email.com</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">© <span id="y"></span> LydiaCHY. All rights reserved.</div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <footer>
+      © <span id="y"></span> LydiaCHY · Made with ❄️ in Ice-Blue
+    </footer>
+  </div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
