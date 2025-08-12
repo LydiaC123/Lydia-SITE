@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LydiaCHY</title>
+  <meta name="description" content="LydiaCHY 的个人主页" />
+  <style>
+    :root{
+      --bg:#0b1220;/* 背景 */
+      --card:#0f1628;/* 卡片 */
+      --text:#e6edf7;/* 文字 */
+      --muted:#9fb3c8;/* 次要文字 */
+      --brand:#4da3ff;/* 主题色：冰蓝 */
+      --accent:#a6f6ff;/* 点缀色：冰晶青蓝 */
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      color:var(--text);
+      background:radial-gradient(1200px 800px at 10% 10%, #0d1a33, transparent),
+                 radial-gradient(1000px 700px at 90% 20%, #0a1a2b, transparent),
+                 linear-gradient(180deg, #0b1220, #0e1628);
+    }
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1080px;margin:0 auto;padding:24px}
+    header{
+      position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);
+      background:linear-gradient( to bottom, rgba(11,18,32,.85), rgba(11,18,32,.35));
+      border-bottom:1px solid rgba(255,255,255,.06);
+      z-index:10;
+    }
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
+    .menu{display:flex;gap:16px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:999px;background:var(--brand);color:white;font-weight:600;box-shadow:var(--shadow)}
+
+    .hero{padding:80px 0 40px}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+          border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero h1{font-size:42px;line-height:1.2;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:#d0d8e6}
+    .illus{aspect-ratio:4/3;border-radius:var(--radius);background:radial-gradient(240px 200px at 30% 30%, rgba(77,163,255,.30), transparent),radial-gradient(240px 200px at 70% 60%, rgba(166,246,255,.25), transparent), #0f1626;display:grid;place-items:center}
+    .illus span{opacity:.8;text-align:center;padding:12px}
+
+    section{padding:40px 0}
+    .section-title{font-size:24px;margin:0 0 16px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .tile{padding:18px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01))}
+    .tile h3{margin:6px 0 8px;font-size:18px}
+    .tile p{margin:0;color:var(--muted)}
+
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+    .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+    form{display:grid;gap:10px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:#0f1626;color:var(--text)}
+    textarea{min-height:120px;resize:vertical}
+    .small{font-size:12px;color:var(--muted)}
+
+    footer{padding:24px 0;color:#9aa4b2;border-top:1px solid rgba(255,255,255,.08)}
+
+    @media (max-width:960px){
+      .hero .wrap, .about, .contact{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><span class="dot"></span><span>LydiaCHY</span></div>
+        <div class="menu">
+          <a href="#about">关于我</a>
+          <a href="#experience">经历</a>
+          <a href="#contact" class="btn">联系我</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="wrap">
+        <div class="card" style="padding:22px">
+          <h1>你好，我是<span style="color:var(--brand)">LydiaCHY</span> 👋</h1>
+          <p>我是一名在读临床医学生，经历是「西工大附中 → 北京大学医学部」。喜欢把医学和科技的知识讲得清清楚楚、软软糯糯。</p>
+          <div class="badges">
+            <span class="badge">学生</span>
+            <span class="badge">临床医学</span>
+            <span class="badge">北京大学医学部</span>
+          </div>
+        </div>
+        <div class="illus card">
+          <span>这里可以放你的照片或插画（把下方 img 的 src 换成你的链接）<br><img src="你的图片地址" alt="LydiaCHY" style="max-width:80%;border-radius:12px"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">📚 我的经历</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>西工大附中</h3>
+          <p>高中阶段打下扎实的理科与人文基础。</p>
+        </article>
+        <article class="tile">
+          <h3>北京大学医学部</h3>
+          <p>临床医学在读：拥抱科学与人文，修炼医者基本功。</p>
+        </article>
+        <article class="tile">
+          <h3>未来作品</h3>
+          <p>正在积蓄力量，敬请期待～</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">🙋 关于我</h2>
+      <div class="about">
+        <div class="tile">
+          <p>你好，我是 LydiaCHY。正在北京大学医学部学习临床医学，对医学知识的清晰表达、科普写作和新技术在医疗中的应用很感兴趣。这个小站会记录我的学习、思考与成长。</p>
+        </div>
+        <div class="tile">
+          <ul>
+            <li>📍 城市：北京（可变）</li>
+            <li>🎓 学校/专业：北京大学医学部｜临床医学（在读）</li>
+            <li>🧰 正在修炼：临床基础、科研入门、信息整理</li>
+            <li>🧩 计划：写几篇学习札记，做一个小小的医学科普专栏</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">📬 联系我</h2>
+      <div class="contact">
+        <form action="mailto:your@email.com" method="post" enctype="text/plain" class="card" style="padding:18px">
+          <input name="name" placeholder="你的名字" required />
+          <input name="email" type="email" placeholder="你的邮箱" required />
+          <textarea name="message" placeholder="想对我说什么…" required></textarea>
+          <button class="btn" type="submit">发送</button>
+          <div class="small">* 暂未设置专用邮箱，如需，我可以帮你接入表单服务。</div>
+        </form>
+        <div class="tile">
+          <p>也可以在这些地方找到我（稍后可替换真实链接）：</p>
+          <p>🐙 GitHub：<a href="#">@yourname</a><br>
+             💼 LinkedIn：<a href="#">your-link</a><br>
+             ✉️ 邮箱：<a href="mailto:your@email.com">your@email.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> LydiaCHY. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
